@@ -1,16 +1,14 @@
 [English](./README.md) | 中文
 
-# Swoole
+<h1>
+<img width="200" height="120" align=center alt="Swoole Logo" src="https://www.swoole.co.uk/images/swoole-logo.svg" />
+</h1>
 
-[![Latest Version](https://img.shields.io/github/release/swoole/swoole-src.svg?style=flat-square)](https://github.com/swoole/swoole-src/releases)
-[![Build Status](https://api.travis-ci.org/swoole/swoole-src.svg)](https://travis-ci.org/swoole/swoole-src)
-[![License](https://img.shields.io/badge/license-apache2-blue.svg)](LICENSE)
-[![Join the chat at https://gitter.im/swoole/swoole-src](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/swoole/swoole-src?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![lib-swoole](https://github.com/swoole/v4.4-lts/actions/workflows/lib.yml/badge.svg)](https://github.com/swoole/v4.4-lts/actions/workflows/lib.yml)
+[![ext-swoole](https://github.com/swoole/v4.4-lts/actions/workflows/ext.yml/badge.svg)](https://github.com/swoole/v4.4-lts/actions/workflows/ext.yml)
+[![run-swoole-test](https://github.com/swoole/v4.4-lts/actions/workflows/test.yml/badge.svg)](https://github.com/swoole/v4.4-lts/actions/workflows/test.yml)
 [![Coverity Scan Build Status](https://scan.coverity.com/projects/11654/badge.svg)](https://scan.coverity.com/projects/swoole-swoole-src)
-[![Backers on Open Collective](https://opencollective.com/swoole-src/backers/badge.svg)](#backers) 
-[![Sponsors on Open Collective](https://opencollective.com/swoole-src/sponsors/badge.svg)](#sponsors) 
-
-![](./mascot.png)
+[![codecov](https://codecov.io/gh/swoole/swoole-src/branch/master/graph/badge.svg)](https://codecov.io/gh/swoole/swoole-src)
 
 **Swoole是一个为PHP用C和C++编写的基于事件的高性能异步&协程并行网络通信引擎**
 
