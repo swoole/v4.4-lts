@@ -29,11 +29,11 @@ jobs:
         echo "`git log -10 --stat --pretty --oneline`"
     - name: Run pecl-install.sh
       run: |
-        sudo ${{runner.workspace}}/swoole-src/travis/pecl-install.sh
+        sudo ${{runner.workspace}}/v4.4-lts/travis/pecl-install.sh
     - name: Run simple-compile-on-github.sh
       run: |
-        sudo ${{runner.workspace}}/swoole-src/travis/simple-compile-on-github.sh
+        sudo ${{runner.workspace}}/v4.4-lts/travis/simple-compile-on-github.sh
     - name: Run Swoole test
       run: |
         export TRAVIS_BRANCH=${GITHUB_REF##*/}
-        ${{runner.workspace}}/swoole-src/travis/route.sh
+        ${{runner.workspace}}/v4.4-lts/travis/route.sh
