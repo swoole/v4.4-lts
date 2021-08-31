@@ -97,7 +97,16 @@ extern zend_module_entry swoole_module_entry;
 #endif
 
 #define SW_CHECK_RETURN(s)      if(s<0){RETURN_FALSE;}else{RETURN_TRUE;}
-#define SW_LOCK_CHECK_RETURN(s) if(s==0){RETURN_TRUE;}else{zend_update_property_long(NULL,ZEND_THIS,SW_STRL("errCode"),s);RETURN_FALSE;}
+
+#define SW_LOCK_CHECK_RETURN(s)																						   \
+    zend_long ___tmp_return_value = s; 																				   \
+    if (___tmp_return_value == 0) {                                                                                    \
+        RETURN_TRUE;                                                                                                   \
+    } else {                                                                                                           \
+        zend_update_property_long(NULL, SW_Z8_OBJ_P(ZEND_THIS), SW_STRL("errCode"), ___tmp_return_value );             \
+        RETURN_FALSE;                                                                                                  \
+    }
+
 
 #define php_swoole_fatal_error(level, fmt_str, ...) \
         php_error_docref(NULL, level, (const char *) (fmt_str), ##__VA_ARGS__)

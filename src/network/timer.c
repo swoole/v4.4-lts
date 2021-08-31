@@ -282,12 +282,12 @@ int swTimer_select(swTimer *timer)
     }
     else
     {
-        long next_msec = tnode->exec_msec - now_msec;
-        if (next_msec <= 0)
+        timer->_next_msec = tnode->exec_msec - now_msec;
+        if (timer->_next_msec <= 0)
         {
-            next_msec = 1;
+            timer->_next_msec = 1;
         }
-        timer->set(timer, next_msec);
+        timer->set(timer, timer->_next_msec);
     }
     timer->round++;
 
