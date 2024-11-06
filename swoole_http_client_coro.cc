@@ -1494,7 +1494,7 @@ bool http_client::recv_http_response(double timeout)
 
     if (timeout == 0)
     {
-        timeout = socket->get_timeout(SW_TIMEOUT_READ);
+        timeout = connect_timeout;
     }
     Socket::timeout_controller tc(socket, timeout, SW_TIMEOUT_READ);
     while (true)
